@@ -3,17 +3,7 @@ guid: e7cc32f54f97b684d9c8f6a49f436948
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: StoolSilver.001
-    second: {fileID: 2100000, guid: 5c51fa1988cacfe4ba69ef1630626c2d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: blackMetal.001
-    second: {fileID: 2100000, guid: 7bdf86a9a8e763940ace1785be9e467d, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
