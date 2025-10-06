@@ -600,6 +600,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Lysstofsr\xF8r"
       objectReference: {fileID: 0}
+    - target: {fileID: 1625722803048867536, guid: ba38cd3ffeee749aebdd1d43d8cc3be5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5029556512498424716, guid: ba38cd3ffeee749aebdd1d43d8cc3be5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -610,7 +614,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5029556512498424716, guid: ba38cd3ffeee749aebdd1d43d8cc3be5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.003
+      value: 0.0004
       objectReference: {fileID: 0}
     - target: {fileID: 5029556512498424716, guid: ba38cd3ffeee749aebdd1d43d8cc3be5, type: 3}
       propertyPath: m_LocalRotation.w
