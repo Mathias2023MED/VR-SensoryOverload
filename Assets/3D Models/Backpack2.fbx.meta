@@ -1,24 +1,9 @@
 fileFormatVersion: 2
-guid: 7e94eeb259c1def4fbc7bc6b2566026a
+guid: a4c6cbd1602da45f5a45647444a9d8e3
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Backpack_Tex_Color
-    second: {fileID: 2100000, guid: 2fc2075d47a053e49bd563ed27479a5a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Backpack_Tex_Metal
-    second: {fileID: 2100000, guid: 3b10a76cca9196e498aeccc864272e97, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Backpack_Tex_Strap
-    second: {fileID: 2100000, guid: c2c97bc4a2010ec4b8053d7850491c14, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
