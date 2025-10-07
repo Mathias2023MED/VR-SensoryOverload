@@ -1,108 +1,80 @@
 using UnityEngine;
-using UnityEngine.Rendering;
+using System.Collections;
 
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
-public class ObjectGhosting : MonoBehaviour
+public class ObjectGhostTrail : MonoBehaviour
 {
-    [Header("Ghosting Settings")]
-    public int ghostCount = 3;            // Number of ghost copies
-    public float offsetStrength = 0.05f;  // Max offset distance
-    public float alpha = 0.2f;            // Base transparency
-    public float ghostSmooth = 2f;        // How quickly ghosts drift to new positions
-    public float changeInterval = 0.5f;   // How often to pick a new random offset
+    [Header("Ghost Trail Settings")]
+    public Material ghostMaterial;   // Assign your GhostMaterial here
+    public float spawnInterval = 0.05f;
+    public float fadeDuration = 1f;
+    public float startAlpha = 0.15f;
+    public float minVelocity = 0.05f;
 
-    private Mesh mesh;
-    private MeshRenderer rend;
-
-    private Vector3[] ghostOffsets;
-    private Vector3[] targetOffsets;
     private float timer;
+    private Vector3 lastPosition;
 
     void Start()
     {
-        mesh = GetComponent<MeshFilter>().sharedMesh;
-        rend = GetComponent<MeshRenderer>();
-
-        ghostOffsets = new Vector3[ghostCount];
-        targetOffsets = new Vector3[ghostCount];
-        PickNewTargets();
+        lastPosition = transform.position;
     }
 
     void Update()
     {
-        // Every interval, pick new random offsets
         timer += Time.deltaTime;
-        if (timer > changeInterval)
+
+        float velocity = (transform.position - lastPosition).magnitude / Mathf.Max(Time.deltaTime, 0.0001f);
+        lastPosition = transform.position;
+
+        if (velocity > minVelocity && timer >= spawnInterval)
         {
+            SpawnGhost();
             timer = 0f;
-            PickNewTargets();
-        }
-
-        // Smoothly move ghost offsets toward targets
-        for (int i = 0; i < ghostCount; i++)
-        {
-            ghostOffsets[i] = Vector3.Lerp(
-                ghostOffsets[i],
-                targetOffsets[i],
-                Time.deltaTime * ghostSmooth
-            );
         }
     }
 
-    void LateUpdate()
+    void SpawnGhost()
     {
-        if (!mesh || !rend) return;
+        MeshFilter sourceMF = GetComponent<MeshFilter>();
+        MeshRenderer sourceMR = GetComponent<MeshRenderer>();
 
-        for (int i = 0; i < ghostCount; i++)
-        {
-            Matrix4x4 matrix = Matrix4x4.TRS(
-                transform.position + ghostOffsets[i],
-                transform.rotation,
-                transform.lossyScale
-            );
+        if (sourceMF == null || sourceMR == null || ghostMaterial == null)
+            return;
 
-            for (int sub = 0; sub < mesh.subMeshCount; sub++)
-            {
-                // Make a transparent copy of the material
-                Material mat = new Material(rend.sharedMaterials[sub]);
+        GameObject ghost = new GameObject("Ghost");
+        ghost.transform.SetPositionAndRotation(transform.position, transform.rotation);
+        ghost.transform.localScale = transform.localScale;
 
-                if (mat.HasProperty("_BaseColor"))
-                {
-                    Color c = mat.GetColor("_BaseColor");
+        MeshFilter mf = ghost.AddComponent<MeshFilter>();
+        mf.sharedMesh = sourceMF.sharedMesh;
 
-                    // Stronger transparency falloff
-                    float fade = alpha / Mathf.Pow(i + 1, 2f);
-                    c.a = Mathf.Clamp01(fade);
+        MeshRenderer mr = ghost.AddComponent<MeshRenderer>();
+        Material matInstance = new Material(ghostMaterial);
 
-                    mat.SetColor("_BaseColor", c);
+        // Copy base color tint if available
+        Color c = sourceMR.material.HasProperty("_BaseColor") ?
+            sourceMR.material.GetColor("_BaseColor") : Color.white;
+        c.a = startAlpha;
+        matInstance.color = c;
 
-                    // Force transparency mode for URP Lit
-                    if (mat.HasProperty("_Surface"))
-                    {
-                        mat.SetFloat("_Surface", 1f); // Transparent
-                    }
-                    mat.renderQueue = (int)RenderQueue.Transparent;
-                }
+        mr.material = matInstance;
 
-
-                Graphics.DrawMesh(
-                    mesh,
-                    matrix,
-                    mat,
-                    gameObject.layer,
-                    null,
-                    sub
-                );
-            }
-        }
+        StartCoroutine(FadeAndDestroy(ghost, matInstance, fadeDuration));
     }
 
-    void PickNewTargets()
+    IEnumerator FadeAndDestroy(GameObject ghost, Material mat, float duration)
     {
-        for (int i = 0; i < ghostCount; i++)
+        float elapsed = 0f;
+        Color c = mat.color;
+
+        while (elapsed < duration)
         {
-            targetOffsets[i] = Random.insideUnitSphere * offsetStrength;
+            elapsed += Time.deltaTime;
+            c.a = Mathf.Lerp(startAlpha, 0f, elapsed / duration);
+            mat.color = c;
+            yield return null;
         }
+
+        Destroy(ghost);
     }
 }
-
