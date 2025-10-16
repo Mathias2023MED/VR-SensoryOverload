@@ -7590,8 +7590,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1013654924}
     - target: {fileID: 7580690680280974881, guid: d0954bca813767949af67745b0669b66, type: 3}
+      propertyPath: pulseSpeed
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580690680280974881, guid: d0954bca813767949af67745b0669b66, type: 3}
       propertyPath: buildupTime
-      value: 240.04
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580690680280974881, guid: d0954bca813767949af67745b0669b66, type: 3}
+      propertyPath: postBuildupSlightBlur
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8869876527987935381, guid: d0954bca813767949af67745b0669b66, type: 3}
       propertyPath: m_Pivot.x
