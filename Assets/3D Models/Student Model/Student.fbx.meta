@@ -8,37 +8,37 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: BodyShader
-    second: {fileID: 2100000, guid: 71859f16167867746aa89574e9f829a9, type: 2}
+    second: {fileID: 2100000, guid: d864910aa94efd041bc4ce3f3298e50d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: EyeAndMouthShader
-    second: {fileID: 2100000, guid: b88d1c34305c0c44582da99b5a6ac837, type: 2}
+    second: {fileID: 2100000, guid: 48a668ffa47ea594b9b4c88d86152c6b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: HairShader
-    second: {fileID: 2100000, guid: ce6d91ae2346e6f40a5c2668eba87f2d, type: 2}
+    second: {fileID: 2100000, guid: adfbed72a38e26143bcb18f7f59ae583, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: PantsColor
-    second: {fileID: 2100000, guid: ddc900d84b12dde4abcbd5603f5a168b, type: 2}
+    second: {fileID: 2100000, guid: 3c7bd4f8c6b94d04fac385d2f91cac80, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: PenMaterial
-    second: {fileID: 2100000, guid: 46822489674c3e640a90cd1017b3f5f9, type: 2}
+    second: {fileID: 2100000, guid: c68f42e0c4cb26b41a52079bc5c96a71, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: ShirtColor
-    second: {fileID: 2100000, guid: 92b2f6c9e8af5374982240a30731d1b9, type: 2}
+    second: {fileID: 2100000, guid: dec486fdf2652dc4d9e67acf24f3641a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Shoes_Mat
-    second: {fileID: 2100000, guid: c9894f7eb1ee13c4b874f50c5d00024c, type: 2}
+    second: {fileID: 2100000, guid: e2bfa75ae5d089045b29b1cb1927bb68, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -52,10 +52,7 @@ ModelImporter:
     removeConstantScaleCurves: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Armature.NPC|Idle_4' has import animation warnings
-      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
-      to improve retargeting quality.\n\t'Shoulder.L' has translation animation that
-      will be discarded.\n\t'Shoulder.R' has translation animation that will be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
