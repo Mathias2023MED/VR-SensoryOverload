@@ -131,7 +131,7 @@ MonoBehaviour:
   intensityMax: 0.6
   scatterMin: 0.5
   scatterMax: 0.7
-  duration: 300
+  duration: 180
 --- !u!1 &6663607142075291038
 GameObject:
   m_ObjectHideFlags: 0
