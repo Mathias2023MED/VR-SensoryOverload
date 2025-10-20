@@ -7595,7 +7595,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7580690680280974881, guid: d0954bca813767949af67745b0669b66, type: 3}
       propertyPath: buildupTime
-      value: 150
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580690680280974881, guid: d0954bca813767949af67745b0669b66, type: 3}
+      propertyPath: maxIntensity
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580690680280974881, guid: d0954bca813767949af67745b0669b66, type: 3}
+      propertyPath: blurFadeInTime
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7580690680280974881, guid: d0954bca813767949af67745b0669b66, type: 3}
       propertyPath: postBuildupSlightBlur
