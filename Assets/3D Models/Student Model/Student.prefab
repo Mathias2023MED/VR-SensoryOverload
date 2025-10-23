@@ -105,5 +105,6 @@ MonoBehaviour:
   animator: {fileID: 1323950728737495713}
   minIdleIndex: 1
   maxIdleIndex: 2
-  idleSwitchInterval: 5
   randomizeSwitch: 1
+  minLoopsBeforeSwitch: 2
+  maxLoopsBeforeSwitch: 4
