@@ -683,7 +683,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &46374071
 Transform:
   m_ObjectHideFlags: 0
@@ -710,7 +710,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 6722724b786bfbe4b9cc2423b836c115, type: 3}
+  m_Resource: {fileID: 8300000, guid: 2dba6acf225924340aed3a1aabc99f35, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2872,7 +2872,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: fc6930f481179b44995a975d8f8f4cf8, type: 3}
+  m_Resource: {fileID: 8300000, guid: c8ffe58420c7d964fb0290153915fcfc, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.48
   m_Pitch: 1
@@ -2986,7 +2986,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: ea3f8329d83725242bffcb39853bbb1f, type: 3}
+  m_Resource: {fileID: 8300000, guid: 70ecbd521f6d3f1498e68f9bc265156e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -5944,9 +5944,9 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 6a3a6eb76e0d36648a3a884ead2aae06, type: 3}
+  m_Resource: {fileID: 8300000, guid: ffaec5cbb5f56a343a06558661f27865, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.495
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5954,7 +5954,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 17.68
+  MinDistance: 10.5
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -9135,7 +9135,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 176b3c606893411439e72ea520908a29, type: 3}
+  m_Resource: {fileID: 8300000, guid: 82f244f646b1aa94480aa741aac0e9b2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -12562,7 +12562,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 85bde804d74a55146b5d3506fa9ae9de, type: 3}
+  m_Resource: {fileID: 8300000, guid: f763e34e34ea6d044be752eb64cb9e94, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
