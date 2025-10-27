@@ -12,9 +12,9 @@ public class LightFlicker : MonoBehaviour
     public float scatter = 0.6f;
 
     [Header("Timing")]
-    public float rampUpTime = 120f;   // Hvor lang tid der går før flicker starter
-    public float flickerSpeed = 25f;  // Hvor hurtigt flickeret svinger
-    public float flickerAmount = 0.25f; // Hvor kraftigt flickeret er
+    public float rampUpTime = 120f;     // Hvor lang tid til den når max
+    public float pulseSpeed = 0.5f;     // Hvor hurtigt den “ånder”
+    public float pulseAmount = 0.2f;    // Hvor meget den varierer (op/ned fra max)
 
     private Bloom bloom;
 
@@ -39,16 +39,17 @@ public class LightFlicker : MonoBehaviour
 
         if (time < rampUpTime)
         {
-            // Før 120 sek: glid stille fra startIntensity til maxIntensity
+            // Før 120 sekunder: jævn stigning mod max
             float t = time / rampUpTime;
             bloom.intensity.value = Mathf.Lerp(startIntensity, maxIntensity, t);
         }
         else
         {
-            // Efter 120 sek: flicker omkring maxIntensity
-            float noise = Mathf.PerlinNoise(Time.time * flickerSpeed, 0f);
-            float flicker = (noise - 0.5f) * 2f * flickerAmount; // mellem -amount og +amount
-            bloom.intensity.value = Mathf.Clamp(maxIntensity + flicker, 0f, maxIntensity + flickerAmount);
+            // Efter 120 sekunder: smooth “blussen” omkring maxIntensity
+            float pulse = (Mathf.Sin((time - rampUpTime) * pulseSpeed * Mathf.PI * 2f) + 1f) * 0.5f;
+            float flickerValue = Mathf.Lerp(maxIntensity - pulseAmount, maxIntensity + pulseAmount, pulse);
+
+            bloom.intensity.value = flickerValue;
         }
     }
 }

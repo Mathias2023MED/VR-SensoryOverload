@@ -7909,8 +7909,8 @@ MonoBehaviour:
   maxIntensity: 1.2
   scatter: 0.6
   rampUpTime: 10
-  flickerSpeed: 20
-  flickerAmount: 0.2
+  pulseSpeed: 0.8
+  pulseAmount: 0.3
 --- !u!1 &837090498 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7380437938996684431, guid: d35aae1f9d9abea4fb493964c892c17b, type: 3}
