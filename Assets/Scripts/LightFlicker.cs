@@ -5,24 +5,25 @@ using UnityEngine.Rendering.Universal;
 
 public class LightFlicker : MonoBehaviour
 {
-    [Header("Bloom Settings")]
-    public Volume volume;                 // Volume med Bloom aktiveret
-    public float intensityMin = 0.3f;     // Minimum intensity
-    public float intensityMax = 0.6f;     // Maximum intensity
-    public float scatterMin = 0.5f;       // Minimum scatter
-    public float scatterMax = 0.7f;       // Maximum scatter
-    public float duration = 2f;           // Hvor lang tid en fuld pulsering tager (i sekunder)
+     [Header("Bloom Settings")]
+    public Volume volume;
+    public float startIntensity = 0.2f;
+    public float maxIntensity = 1.2f;
+    public float scatter = 0.6f;
+
+    [Header("Timing")]
+    public float rampUpTime = 120f;   // Hvor lang tid der går før flicker starter
+    public float flickerSpeed = 25f;  // Hvor hurtigt flickeret svinger
+    public float flickerAmount = 0.25f; // Hvor kraftigt flickeret er
 
     private Bloom bloom;
 
     void Start()
     {
-        // Find Bloom i volume-profilen
-        if (volume.profile.TryGet<Bloom>(out bloom))
+        if (volume.profile.TryGet(out bloom))
         {
-            // Start med min værdier
-            bloom.intensity.value = intensityMin;
-            bloom.scatter.value = scatterMin;
+            bloom.intensity.value = startIntensity;
+            bloom.scatter.value = scatter;
         }
         else
         {
@@ -34,15 +35,20 @@ public class LightFlicker : MonoBehaviour
     {
         if (bloom == null) return;
 
-        // Beregn hvor langt vi er i pulsen (0-1)
-        float t = (Time.time % duration) / duration;
+        float time = Time.time;
 
-        // Brug en sin-lignende kurve for smooth pulsering
-        float pulse = (Mathf.Sin(t * Mathf.PI * 2f - Mathf.PI / 2f) + 1f) / 2f;
-        // t=0 -> pulse=0, t=duration/2 -> pulse=1, t=duration -> pulse=0
-
-        // Sæt Bloom værdier
-        bloom.intensity.value = Mathf.Lerp(intensityMin, intensityMax, pulse);
-        bloom.scatter.value = Mathf.Lerp(scatterMin, scatterMax, pulse);
+        if (time < rampUpTime)
+        {
+            // Før 120 sek: glid stille fra startIntensity til maxIntensity
+            float t = time / rampUpTime;
+            bloom.intensity.value = Mathf.Lerp(startIntensity, maxIntensity, t);
+        }
+        else
+        {
+            // Efter 120 sek: flicker omkring maxIntensity
+            float noise = Mathf.PerlinNoise(Time.time * flickerSpeed, 0f);
+            float flicker = (noise - 0.5f) * 2f * flickerAmount; // mellem -amount og +amount
+            bloom.intensity.value = Mathf.Clamp(maxIntensity + flicker, 0f, maxIntensity + flickerAmount);
+        }
     }
 }
