@@ -682,7 +682,6 @@ GameObject:
   m_Component:
   - component: {fileID: 46374071}
   - component: {fileID: 46374072}
-  - component: {fileID: 46374074}
   - component: {fileID: 46374073}
   m_Layer: 0
   m_Name: Whispering1
@@ -846,9 +845,9 @@ MonoBehaviour:
   maxTransmissionSurfaces: 1
   directMixLevel: 1
   reflections: 1
-  reflectionsType: 1
+  reflectionsType: 0
   useDistanceCurveForReflections: 0
-  currentBakedSource: {fileID: 46374074}
+  currentBakedSource: {fileID: 0}
   reverbTimeLow: 0
   reverbTimeMid: 0
   reverbTimeHigh: 0
@@ -886,33 +885,6 @@ MonoBehaviour:
   applyHRTFToPathing: 0
   pathingMixLevel: 1
   normalizePathingEQ: 0
---- !u!114 &46374074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 46374070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ea378497d2d9e847898c57b9eb3fb94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  influenceRadius: 1000
-  useAllProbeBatches: 0
-  probeBatches: []
-  mTotalDataSize: 0
-  mProbeDataSizes: 
-  mIdentifier:
-    type: 0
-    variation: 1
-    endpointInfluence:
-      center:
-        x: 0.981
-        y: 0.966
-        z: -3.92
-      radius: 1000
-  mProbeBatchesUsed: []
 --- !u!1001 &50419631
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3011,7 +2983,6 @@ GameObject:
   m_Component:
   - component: {fileID: 278814366}
   - component: {fileID: 278814367}
-  - component: {fileID: 278814369}
   - component: {fileID: 278814368}
   m_Layer: 0
   m_Name: Clock
@@ -3175,9 +3146,9 @@ MonoBehaviour:
   maxTransmissionSurfaces: 1
   directMixLevel: 1
   reflections: 1
-  reflectionsType: 1
+  reflectionsType: 0
   useDistanceCurveForReflections: 0
-  currentBakedSource: {fileID: 278814369}
+  currentBakedSource: {fileID: 0}
   reverbTimeLow: 0
   reverbTimeMid: 0
   reverbTimeHigh: 0
@@ -3215,33 +3186,6 @@ MonoBehaviour:
   applyHRTFToPathing: 0
   pathingMixLevel: 1
   normalizePathingEQ: 0
---- !u!114 &278814369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 278814365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ea378497d2d9e847898c57b9eb3fb94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  influenceRadius: 1000
-  useAllProbeBatches: 0
-  probeBatches: []
-  mTotalDataSize: 0
-  mProbeDataSizes: 
-  mIdentifier:
-    type: 0
-    variation: 1
-    endpointInfluence:
-      center:
-        x: -3.74
-        y: 3.32
-        z: -13.58
-      radius: 1000
-  mProbeBatchesUsed: []
 --- !u!1 &284762084
 GameObject:
   m_ObjectHideFlags: 0
@@ -3252,7 +3196,6 @@ GameObject:
   m_Component:
   - component: {fileID: 284762086}
   - component: {fileID: 284762085}
-  - component: {fileID: 284762088}
   - component: {fileID: 284762087}
   m_Layer: 0
   m_Name: Birds
@@ -3416,9 +3359,9 @@ MonoBehaviour:
   maxTransmissionSurfaces: 1
   directMixLevel: 1
   reflections: 1
-  reflectionsType: 1
+  reflectionsType: 0
   useDistanceCurveForReflections: 0
-  currentBakedSource: {fileID: 284762088}
+  currentBakedSource: {fileID: 0}
   reverbTimeLow: 0
   reverbTimeMid: 0
   reverbTimeHigh: 0
@@ -3456,33 +3399,6 @@ MonoBehaviour:
   applyHRTFToPathing: 0
   pathingMixLevel: 1
   normalizePathingEQ: 0
---- !u!114 &284762088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 284762084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ea378497d2d9e847898c57b9eb3fb94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  influenceRadius: 1000
-  useAllProbeBatches: 0
-  probeBatches: []
-  mTotalDataSize: 0
-  mProbeDataSizes: 
-  mIdentifier:
-    type: 0
-    variation: 1
-    endpointInfluence:
-      center:
-        x: 9.04
-        y: 1.12
-        z: -0
-      radius: 1000
-  mProbeBatchesUsed: []
 --- !u!1001 &286748088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4747,17 +4663,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 3
   m_UsePipelineSettings: 1
   m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_RenderingLayers: 1
   m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_ShadowRenderingLayers: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
 --- !u!1001 &412002887
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6460,7 +6382,6 @@ GameObject:
   m_Component:
   - component: {fileID: 592382733}
   - component: {fileID: 592382734}
-  - component: {fileID: 592382736}
   - component: {fileID: 592382735}
   m_Layer: 0
   m_Name: Teacher
@@ -6478,7 +6399,7 @@ Transform:
   m_GameObject: {fileID: 592382732}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.19, y: 1.5, z: -9.45}
+  m_LocalPosition: {x: -0.19, y: 2.135, z: -9.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6624,9 +6545,9 @@ MonoBehaviour:
   maxTransmissionSurfaces: 1
   directMixLevel: 1
   reflections: 1
-  reflectionsType: 1
+  reflectionsType: 0
   useDistanceCurveForReflections: 0
-  currentBakedSource: {fileID: 592382736}
+  currentBakedSource: {fileID: 0}
   reverbTimeLow: 0
   reverbTimeMid: 0
   reverbTimeHigh: 0
@@ -6664,33 +6585,6 @@ MonoBehaviour:
   applyHRTFToPathing: 0
   pathingMixLevel: 1
   normalizePathingEQ: 0
---- !u!114 &592382736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 592382732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ea378497d2d9e847898c57b9eb3fb94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  influenceRadius: 1000
-  useAllProbeBatches: 0
-  probeBatches: []
-  mTotalDataSize: 0
-  mProbeDataSizes: 
-  mIdentifier:
-    type: 0
-    variation: 1
-    endpointInfluence:
-      center:
-        x: -0.19
-        y: 1.5
-        z: 9.45
-      radius: 1000
-  mProbeBatchesUsed: []
 --- !u!1001 &594476648
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8480,6 +8374,8 @@ MeshRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8501,6 +8397,7 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -9217,6 +9114,8 @@ MeshRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9238,6 +9137,7 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -9275,7 +9175,6 @@ GameObject:
   m_Component:
   - component: {fileID: 871586568}
   - component: {fileID: 871586569}
-  - component: {fileID: 871586571}
   - component: {fileID: 871586570}
   m_Layer: 0
   m_Name: RoomTone
@@ -9439,9 +9338,9 @@ MonoBehaviour:
   maxTransmissionSurfaces: 1
   directMixLevel: 1
   reflections: 1
-  reflectionsType: 1
+  reflectionsType: 0
   useDistanceCurveForReflections: 0
-  currentBakedSource: {fileID: 871586571}
+  currentBakedSource: {fileID: 0}
   reverbTimeLow: 0
   reverbTimeMid: 0
   reverbTimeHigh: 0
@@ -9479,33 +9378,6 @@ MonoBehaviour:
   applyHRTFToPathing: 0
   pathingMixLevel: 1
   normalizePathingEQ: 0
---- !u!114 &871586571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 871586567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ea378497d2d9e847898c57b9eb3fb94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  influenceRadius: 1000
-  useAllProbeBatches: 0
-  probeBatches: []
-  mTotalDataSize: 0
-  mProbeDataSizes: 
-  mIdentifier:
-    type: 0
-    variation: 1
-    endpointInfluence:
-      center:
-        x: 0
-        y: 3.71
-        z: -1.6
-      radius: 1000
-  mProbeBatchesUsed: []
 --- !u!1001 &872866356
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9952,7 +9824,6 @@ GameObject:
   m_Component:
   - component: {fileID: 929999191}
   - component: {fileID: 929999192}
-  - component: {fileID: 929999194}
   - component: {fileID: 929999193}
   m_Layer: 0
   m_Name: PenClicking
@@ -10116,9 +9987,9 @@ MonoBehaviour:
   maxTransmissionSurfaces: 1
   directMixLevel: 1
   reflections: 1
-  reflectionsType: 1
+  reflectionsType: 0
   useDistanceCurveForReflections: 0
-  currentBakedSource: {fileID: 929999194}
+  currentBakedSource: {fileID: 0}
   reverbTimeLow: 0
   reverbTimeMid: 0
   reverbTimeHigh: 0
@@ -10156,33 +10027,6 @@ MonoBehaviour:
   applyHRTFToPathing: 0
   pathingMixLevel: 1
   normalizePathingEQ: 0
---- !u!114 &929999194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 929999190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ea378497d2d9e847898c57b9eb3fb94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  influenceRadius: 1000
-  useAllProbeBatches: 0
-  probeBatches: []
-  mTotalDataSize: 0
-  mProbeDataSizes: 
-  mIdentifier:
-    type: 0
-    variation: 1
-    endpointInfluence:
-      center:
-        x: 5.43
-        y: 0.9525
-        z: -0.74
-      radius: 1000
-  mProbeBatchesUsed: []
 --- !u!1001 &935255154
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13636,7 +13480,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1207102182}
   - component: {fileID: 1207102183}
-  - component: {fileID: 1207102185}
   - component: {fileID: 1207102184}
   m_Layer: 0
   m_Name: ComputerClicking
@@ -13800,9 +13643,9 @@ MonoBehaviour:
   maxTransmissionSurfaces: 1
   directMixLevel: 1
   reflections: 1
-  reflectionsType: 1
+  reflectionsType: 0
   useDistanceCurveForReflections: 0
-  currentBakedSource: {fileID: 1207102185}
+  currentBakedSource: {fileID: 0}
   reverbTimeLow: 0
   reverbTimeMid: 0
   reverbTimeHigh: 0
@@ -13840,33 +13683,6 @@ MonoBehaviour:
   applyHRTFToPathing: 0
   pathingMixLevel: 1
   normalizePathingEQ: 0
---- !u!114 &1207102185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1207102181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ea378497d2d9e847898c57b9eb3fb94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  influenceRadius: 1000
-  useAllProbeBatches: 0
-  probeBatches: []
-  mTotalDataSize: 0
-  mProbeDataSizes: 
-  mIdentifier:
-    type: 0
-    variation: 0
-    endpointInfluence:
-      center:
-        x: 0
-        y: 0
-        z: 0
-      radius: 0
-  mProbeBatchesUsed: []
 --- !u!1001 &1212020276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16776,7 +16592,6 @@ MonoBehaviour:
   m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
-  m_Version: 2
   m_TaaSettings:
     m_Quality: 3
     m_FrameInfluence: 0.1
@@ -16784,6 +16599,7 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!114 &1402956903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19032,6 +18848,7 @@ GameObject:
   - component: {fileID: 1703375715}
   - component: {fileID: 1703375717}
   - component: {fileID: 1703375716}
+  - component: {fileID: 1703375718}
   m_Layer: 0
   m_Name: Window
   m_TagString: Untagged
@@ -19074,6 +18891,8 @@ MeshRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -19095,6 +18914,7 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -19107,6 +18927,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1703375714}
   m_Mesh: {fileID: -462981019419857548, guid: 858cfb686425e0c47b92af1b7c85f566, type: 3}
+--- !u!114 &1703375718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703375714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e829c87dc2a2ed2419c5f67848317fe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: SteamAudioUnity::SteamAudio.SteamAudioGeometry
+  material: {fileID: 11400000, guid: 08bf73ad12cb44944875b02ce7f9d694, type: 2}
+  exportAllChildren: 0
+  terrainSimplificationLevel: 0
 --- !u!1001 &1705286638
 PrefabInstance:
   m_ObjectHideFlags: 0
