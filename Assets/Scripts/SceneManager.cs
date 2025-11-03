@@ -7,7 +7,7 @@ public class SceneManager : MonoBehaviour
 {
     public Image panel; // Assign your black panel (UI Image) in the Inspector
     public int nextSceneIndex = 1;
-    public float fadeDuration = 5f; // 5 seconds
+    public float fadeDuration = 10f; // 5 seconds
 
     private void Start()
     {
