@@ -7282,7 +7282,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 373974105}
-  fadeDuration: 5
+  fadeDuration: 15
+  blackHoldDuration: 5
 --- !u!4 &408143089
 Transform:
   m_ObjectHideFlags: 0
@@ -7291,9 +7292,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 408143087}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -19, z: 110}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 104.772415, y: -58.348846, z: -110.28884}
+  m_LocalScale: {x: 0.10691672, y: 0.10691672, z: 0.10691672}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -11528,7 +11529,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4425027451079819904, guid: 77b670d6cbadb564f8d81dfb28d2a541, type: 3}
       propertyPath: m_Convex
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4952916762972161026, guid: 77b670d6cbadb564f8d81dfb28d2a541, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -32222,9 +32223,9 @@ Canvas:
   m_GameObject: {fileID: 1749772200}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_RenderMode: 1
+  m_Camera: {fileID: 5769319790051193897}
+  m_PlaneDistance: 0.1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -38597,6 +38598,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b27b6d5dc335842eb87a2864587134b2, type: 3}
+--- !u!20 &5769319790051193897 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 753994913133970467, guid: b27b6d5dc335842eb87a2864587134b2, type: 3}
+  m_PrefabInstance: {fileID: 5769319790051193896}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6268185181817708939
 PrefabInstance:
   m_ObjectHideFlags: 0

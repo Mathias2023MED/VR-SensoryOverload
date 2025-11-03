@@ -4,37 +4,48 @@ using UnityEngine.UI;
 
 public class FadeOut : MonoBehaviour
 {
-    public Image panel; // Assign your black panel (UI Image) in the Inspector
-    public float fadeDuration = 10f; // Duration in seconds
+    public Image panel;
+    public float fadeDuration = 10f;
+    public float blackHoldDuration = 2f; // How long it stays black before fading
 
-    private void Start()
+    private void Awake()
     {
         StartCoroutine(FadeFromBlack());
     }
 
     private IEnumerator FadeFromBlack()
     {
-        // Ensure panel starts fully black (opaque)
+        // Panel starts fully opaque
         Color color = panel.color;
         color.a = 1f;
         panel.color = color;
+
+        // Start with AudioListener muted
+        AudioListener.volume = 0f;
+
+        // Hold black for a moment
+        yield return new WaitForSeconds(blackHoldDuration);
 
         float elapsed = 0f;
 
         while (elapsed < fadeDuration)
         {
-            elapsed += Time.deltaTime;
+            elapsed += Time.unscaledDeltaTime; // independent of time scale
             float t = Mathf.Clamp01(elapsed / fadeDuration);
 
-            // Fade alpha 1 → 0 smoothly
-            color.a = 1f - t;
+            // Smooth fade for panel
+            color.a = Mathf.SmoothStep(1f, 0f, t);
             panel.color = color;
 
-            yield return null; // wait for next frame
+            // Smooth fade for audio
+            AudioListener.volume = Mathf.SmoothStep(0f, 1f, t);
+
+            yield return null;
         }
 
-        // Fully transparent now
+        // Ensure fully transparent & full volume
         color.a = 0f;
         panel.color = color;
+        AudioListener.volume = 1f;
     }
 }

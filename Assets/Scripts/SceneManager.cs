@@ -11,7 +11,7 @@ public class SceneManager : MonoBehaviour
 
     private void Start()
     {
-        FadeToBlack();
+        //FadeToBlack();
     }
 
     public void FadeToBlack()
