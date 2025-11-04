@@ -2947,8 +2947,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 0d9b36df78461c14d88f9bdca8d725a5, type: 2}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: canTalk
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7121897446239062787, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_IsActive
@@ -3711,6 +3719,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: canTalk
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: randomizeSwitch
       value: 0
       objectReference: {fileID: 0}
@@ -3894,8 +3910,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: dec486fdf2652dc4d9e67acf24f3641a, type: 2}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: canTalk
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7235178933998609381, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_IsActive
@@ -13497,12 +13521,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: canTalk
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: minIdleIndex
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: randomizeSwitch
@@ -15482,8 +15514,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: dec486fdf2652dc4d9e67acf24f3641a, type: 2}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: canTalk
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7121897446239062787, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_IsActive
@@ -18093,8 +18133,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: canTalk
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7121897446239062787, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_IsActive
@@ -18259,8 +18307,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: canTalk
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7121897446239062787, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_IsActive
@@ -21695,8 +21751,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: canTalk
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7121897446239062787, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_IsActive
@@ -24748,6 +24812,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 0d9b36df78461c14d88f9bdca8d725a5, type: 2}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: canTalk
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7121897446239062787, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -25511,8 +25583,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: canTalk
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: minIdleIndex
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: randomizeSwitch
@@ -26855,8 +26935,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: dec486fdf2652dc4d9e67acf24f3641a, type: 2}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: canTalk
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7121897446239062787, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_IsActive
@@ -27023,6 +27111,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: faf5caaabf2442d49ad87d220d2bd833, type: 2}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: canTalk
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
       value: 5
@@ -28257,8 +28349,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: canTalk
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7235178933998609381, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_IsActive
@@ -32453,11 +32553,19 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: canTalk
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: minIdleIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7121897446239062787, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
@@ -34960,8 +35068,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: canTalk
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7121897446239062787, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_IsActive
@@ -37112,6 +37228,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: faf5caaabf2442d49ad87d220d2bd833, type: 2}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: canTalk
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: randomizeSwitch
       value: 0
       objectReference: {fileID: 0}
@@ -37943,8 +38067,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: canTalk
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7121897446239062787, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_IsActive
