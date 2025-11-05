@@ -19,6 +19,7 @@ public class FidgetSpinner : MonoBehaviour
     public void StartSpinning()
     {
         isSpinning = true;
+        Debug.Log("Spinning");
     }
 
     // Optional: Call this to stop spinning
