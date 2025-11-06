@@ -3,7 +3,37 @@ guid: c8421e99edf9c824891c67381c6b1a2f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BodyShader
+    second: {fileID: 2100000, guid: bf1af491f8a9a514387a19ef1ae2ac55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EyeAndMouthShader
+    second: {fileID: 2100000, guid: 4079b9f1b360c7f49b67f385f387a235, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HairShader
+    second: {fileID: 2100000, guid: 403b58c4844c79043842d5e4d5ba6c04, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PantsColor
+    second: {fileID: 2100000, guid: 0290fd45f64398d4d8a70b47ca2abf17, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShirtColor
+    second: {fileID: 2100000, guid: c0d8212a6f9f9da4287c8ed372b84d2c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shoes_Mat
+    second: {fileID: 2100000, guid: 91ae32c00e840f94ea2862633ec9798d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
