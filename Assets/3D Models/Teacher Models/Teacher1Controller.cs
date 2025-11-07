@@ -8,7 +8,7 @@ public class Teacher1Controller : MonoBehaviour
 
     [Header("Idle Settings")]
     public int minIdleIndex = 1;
-    public int maxIdleIndex = 3;
+    public int maxIdleIndex = 2;
     public int minLoopsBeforeSwitch = 2;
     public int maxLoopsBeforeSwitch = 4;
 
