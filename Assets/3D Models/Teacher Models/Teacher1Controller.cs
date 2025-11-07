@@ -3,7 +3,10 @@ using System.Collections;
 
 public class Teacher1Controller : MonoBehaviour
 {
+    [Header("References")]
     public Animator animator;
+
+    [Header("Idle Settings")]
     public int minIdleIndex = 1;
     public int maxIdleIndex = 3;
     public int minLoopsBeforeSwitch = 2;
@@ -12,54 +15,60 @@ public class Teacher1Controller : MonoBehaviour
     private float clipLength;
     private float timer;
     private float currentLoopDuration;
-    private bool isInterrupted = false;
 
     void Start()
     {
-        if (animator == null)
-            animator = GetComponent<Animator>();
+        if (!animator) animator = GetComponent<Animator>();
 
         int startIdle = Random.Range(minIdleIndex, maxIdleIndex + 1);
         animator.SetInteger("IdleIndex", startIdle);
-        animator.Play($"Idle{startIdle}");
+        animator.speed = Random.Range(0.9f, 1.1f);
+
+        AnimatorStateInfo info = animator.GetCurrentAnimatorStateInfo(0);
+        clipLength = info.length;
+        currentLoopDuration = clipLength * Random.Range(minLoopsBeforeSwitch, maxLoopsBeforeSwitch + 1);
+
+        // Teacher always talking while teaching
+        animator.SetBool("IsTalking", true);
+    }
+
+    void Update()
+    {
+        // If currently in interruption, stop idle switching
+        if (animator.GetBool("IsInterrupted"))
+            return;
+
+        timer += Time.deltaTime;
+        if (timer >= currentLoopDuration)
+        {
+            timer = 0f;
+            StartCoroutine(SwitchIdle());
+        }
+    }
+
+    private IEnumerator SwitchIdle()
+    {
+        int newIdle = Random.Range(minIdleIndex, maxIdleIndex + 1);
+        animator.SetInteger("IdleIndex", newIdle);
+
+        yield return null;
 
         AnimatorStateInfo info = animator.GetCurrentAnimatorStateInfo(0);
         clipLength = info.length;
         currentLoopDuration = clipLength * Random.Range(minLoopsBeforeSwitch, maxLoopsBeforeSwitch + 1);
     }
 
-    void Update()
+    // ?? Called by the Time Script when interruption begins
+    public void StartInterruption()
     {
-        if (isInterrupted) return;
-
-        timer += Time.deltaTime;
-        if (timer >= currentLoopDuration)
-        {
-            timer = 0f;
-            int newIdle = Random.Range(minIdleIndex, maxIdleIndex + 1);
-            animator.SetInteger("IdleIndex", newIdle);
-
-            AnimatorStateInfo info = animator.GetCurrentAnimatorStateInfo(0);
-            clipLength = info.length;
-            currentLoopDuration = clipLength * Random.Range(minLoopsBeforeSwitch, maxLoopsBeforeSwitch + 1);
-        }
+        animator.SetBool("IsInterrupted", true);
+        animator.SetBool("IsTalking", false); // stop mouth loop
     }
 
-    // --- Called externally by Time Script ---
-    public void TriggerInterruption()
+    // ?? Called by the Time Script when interruption ends
+    public void EndInterruption()
     {
-        StartCoroutine(HandleInterruption());
-    }
-
-    private IEnumerator HandleInterruption()
-    {
-        isInterrupted = true;
-        animator.SetBool("isTalkingInterrupted", true);
-        animator.Play("TalkInterrupted");
-
-        yield return new WaitForSeconds(5f); // length of interaction
-
-        animator.SetBool("isTalkingInterrupted", false);
-        isInterrupted = false;
+        animator.SetBool("IsInterrupted", false);
+        animator.SetBool("IsTalking", true); // resume talking loop
     }
 }
