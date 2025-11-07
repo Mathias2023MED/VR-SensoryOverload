@@ -836,7 +836,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 95ef95e551d5f4d45b8936de0ad7e772, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.788
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -10202,7 +10202,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 47f066c45b167584ba963f0b3069467b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.495
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -10210,7 +10210,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 10.5
+  MinDistance: 13.39
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -16801,7 +16801,7 @@ Transform:
   m_GameObject: {fileID: 920634279}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.923, y: 1.427, z: 1.3}
+  m_LocalPosition: {x: 0.13, y: 1.427, z: 1.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16818,7 +16818,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: c9c030b7e519d414da940c8bf8e39fcb, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -16828,7 +16828,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 2.06
+  MinDistance: 2.69
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -32290,7 +32290,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 33897b2fb79d7814795e32aa66162e4c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.883
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -33417,7 +33417,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: b957a5aeb6b09cd4ab12fe980babdbe6, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.495
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -33425,7 +33425,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 10.5
+  MinDistance: 12.58
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
