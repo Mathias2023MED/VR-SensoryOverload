@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Linq;
 
 public class Teacher2Controller : MonoBehaviour
 {
@@ -19,21 +20,18 @@ public class Teacher2Controller : MonoBehaviour
     {
         if (teacherAnimator == null)
             teacherAnimator = GetComponent<Animator>();
-
-        if (doorAnimator != null)
-        doorAnimator.SetBool("isOpen", false); // ensure door starts closed
     }
 
     void Update()
     {
-        // Check if it's time to start the entrance
+        // Trigger entrance based on timing
         if (!sequenceStarted && Time.time >= enterTime)
         {
             sequenceStarted = true;
             StartCoroutine(EntranceSequence());
         }
 
-        // Allow the Leave animation to override Talk early if needed
+        // Force leave if exitTime reached
         if (sequenceStarted && !hasLeft && Time.time >= exitTime)
         {
             StopAllCoroutines();
@@ -43,20 +41,26 @@ public class Teacher2Controller : MonoBehaviour
 
     private IEnumerator EntranceSequence()
     {
-        // Open door and play enter
+        // Open door and play enter animation
         doorAnimator.SetBool("isOpen", true);
         teacherAnimator.Play("Enter");
 
-        // Wait for enter animation to finish
-        yield return new WaitForSeconds(teacherAnimator.GetCurrentAnimatorStateInfo(0).length);
+        // Wait one frame for Animator to update state
+        yield return null;
+
+        // Get the length of the Enter clip safely
+        float enterLength = teacherAnimator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
+
+        // Wait for Enter animation to finish
+        yield return new WaitForSeconds(enterLength);
 
         // Start talking animation
         teacherAnimator.Play("Talk");
 
-        // Wait until talk duration ends or until overridden
+        // Wait for talkDuration or until interrupted
         yield return new WaitForSeconds(talkDuration);
 
-        // Proceed to leave
+        // Trigger leave sequence
         StartCoroutine(LeaveSequence());
     }
 
@@ -64,12 +68,18 @@ public class Teacher2Controller : MonoBehaviour
     {
         hasLeft = true;
 
-        // Interrupt talk, play leave animation
+        // Interrupt talk and play Leave
         teacherAnimator.Play("Leave");
 
-        // Wait for the animation to finish before closing door
-        yield return new WaitForSeconds(teacherAnimator.GetCurrentAnimatorStateInfo(0).length);
+        // Wait one frame for Animator to update
+        yield return null;
 
+        // Get length of Leave animation
+        float leaveLength = teacherAnimator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
+
+        yield return new WaitForSeconds(leaveLength);
+
+        // Close the door after leaving
         doorAnimator.SetBool("isOpen", false);
     }
 }
