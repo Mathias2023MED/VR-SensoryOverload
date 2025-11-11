@@ -21,7 +21,7 @@ public class FadeOut : MonoBehaviour
         panel.color = color;
 
         // Start with AudioListener muted
-        AudioListener.volume = 0f;
+        //AudioListener.volume = 0f;
 
         // Hold black for a moment
         yield return new WaitForSeconds(blackHoldDuration);
@@ -38,7 +38,7 @@ public class FadeOut : MonoBehaviour
             panel.color = color;
 
             // Smooth fade for audio
-            AudioListener.volume = Mathf.SmoothStep(0f, 1f, t);
+            //AudioListener.volume = Mathf.SmoothStep(0f, 1f, t);
 
             yield return null;
         }
@@ -46,6 +46,6 @@ public class FadeOut : MonoBehaviour
         // Ensure fully transparent & full volume
         color.a = 0f;
         panel.color = color;
-        AudioListener.volume = 1f;
+        //AudioListener.volume = 1f;
     }
 }
