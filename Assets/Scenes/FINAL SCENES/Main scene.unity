@@ -476,8 +476,7 @@ MonoBehaviour:
   teacherAnimator: {fileID: 16543833}
   doorAnimator: {fileID: 1589336286}
   enterTime: 20
-  talkDuration: 120
-  exitTime: 180
+  exitTime: 60
 --- !u!95 &16543833 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2900477015156196401, guid: a30fb4857a870b34ea4df7f156ceed85, type: 3}

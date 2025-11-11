@@ -5,15 +5,15 @@ using System.Linq;
 public class Teacher2Controller : MonoBehaviour
 {
     [Header("References")]
-    public Animator teacherAnimator;   // Animator on Teacher2
-    public Animator doorAnimator;      // Animator on the door
+    public Animator teacherAnimator;
+    public Animator doorAnimator;
 
     [Header("Timing (in seconds)")]
-    public float enterTime = 60f;      // When to start "Enter" sequence
-    public float talkDuration = 120f;  // How long the talk lasts before "Leave"
-    public float exitTime = 180f;      // Optional override if you want a fixed exit moment
+    public float enterTime = 60f;   // When to start entering
+    public float exitTime = 180f;   // When to trigger leaving
 
-    private bool sequenceStarted = false;
+    private bool hasEntered = false;
+    private bool isTalking = false;
     private bool hasLeft = false;
 
     void Start()
@@ -24,62 +24,52 @@ public class Teacher2Controller : MonoBehaviour
 
     void Update()
     {
-        // Trigger entrance based on timing
-        if (!sequenceStarted && Time.time >= enterTime)
+        // Trigger entrance at a specific time
+        if (!hasEntered && Time.time >= enterTime)
         {
-            sequenceStarted = true;
-            StartCoroutine(EntranceSequence());
+            hasEntered = true;
+            StartCoroutine(EnterSequence());
         }
 
-        // Force leave if exitTime reached
-        if (sequenceStarted && !hasLeft && Time.time >= exitTime)
+        // Trigger leave at a specific time (or can be called externally)
+        if (hasEntered && !hasLeft && Time.time >= exitTime)
         {
-            StopAllCoroutines();
+            hasLeft = true;
             StartCoroutine(LeaveSequence());
         }
     }
 
-    private IEnumerator EntranceSequence()
+    private IEnumerator EnterSequence()
     {
-        // Open door and play enter animation
+        // Open the door and play the Enter animation
         doorAnimator.SetBool("isOpen", true);
         teacherAnimator.Play("Enter");
 
-        // Wait one frame for Animator to update state
+        // Wait one frame for Animator to register
         yield return null;
 
-        // Get the length of the Enter clip safely
         float enterLength = teacherAnimator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
-
-        // Wait for Enter animation to finish
         yield return new WaitForSeconds(enterLength);
 
-        // Start talking animation
+        // Start looping Talk after Enter finishes
         teacherAnimator.Play("Talk");
-
-        // Wait for talkDuration or until interrupted
-        yield return new WaitForSeconds(talkDuration);
-
-        // Trigger leave sequence
-        StartCoroutine(LeaveSequence());
+        isTalking = true;
     }
 
     private IEnumerator LeaveSequence()
     {
-        hasLeft = true;
+        isTalking = false;
 
-        // Interrupt talk and play Leave
+        // Close the door at the same time as Leave
+        doorAnimator.SetBool("isOpen", false);
         teacherAnimator.Play("Leave");
 
-        // Wait one frame for Animator to update
         yield return null;
 
-        // Get length of Leave animation
         float leaveLength = teacherAnimator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
-
         yield return new WaitForSeconds(leaveLength);
 
-        // Close the door after leaving
-        doorAnimator.SetBool("isOpen", false);
+        // End of sequence
+        hasLeft = true;
     }
 }
