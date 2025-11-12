@@ -14323,7 +14323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkDuration
-      value: 200
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkDirection
@@ -25448,7 +25448,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkTime
-      value: 30
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
@@ -25456,7 +25456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkDuration
-      value: 200
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkDirection
@@ -34787,7 +34787,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5761337937460009569, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_Name
-      value: Student (4)
+      value: Student_Sidemakker
       objectReference: {fileID: 0}
     - target: {fileID: 5858455476765985074, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_LocalPosition.z
@@ -34958,8 +34958,12 @@ PrefabInstance:
       value: -0.036586553
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: canTalk
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkTime
-      value: 229
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
@@ -34967,7 +34971,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkDuration
-      value: -1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkDirection
@@ -46953,7 +46957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkDuration
-      value: 200
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkDirection
@@ -70519,7 +70523,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkTime
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
@@ -70527,7 +70531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkDuration
-      value: 200
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkDirection
