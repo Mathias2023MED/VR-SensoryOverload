@@ -16,23 +16,29 @@ public class Teacher2Controller : MonoBehaviour
     private bool isTalking = false;
     private bool hasLeft = false;
 
+    private float startTime;
+
     void Start()
     {
         if (teacherAnimator == null)
             teacherAnimator = GetComponent<Animator>();
+
+        startTime = Time.time;
     }
 
     void Update()
     {
+        float elapsed = Time.time - startTime;
+         
         // Trigger entrance at a specific time
-        if (!hasEntered && Time.time >= enterTime)
+        if (!hasEntered && elapsed  >= enterTime)
         {
             hasEntered = true;
             StartCoroutine(EnterSequence());
         }
 
         // Trigger leave at a specific time (or can be called externally)
-        if (hasEntered && !hasLeft && Time.time >= exitTime)
+        if (hasEntered && !hasLeft && elapsed >= exitTime)
         {
             hasLeft = true;
             StartCoroutine(LeaveSequence());
