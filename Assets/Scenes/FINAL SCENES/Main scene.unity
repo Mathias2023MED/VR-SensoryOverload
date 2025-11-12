@@ -25409,6 +25409,55 @@ Transform:
   - {fileID: 2043239591}
   m_Father: {fileID: 730485646}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1230858477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1230858479}
+  - component: {fileID: 1230858480}
+  m_Layer: 0
+  m_Name: --FadeToBlack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1230858479
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230858477}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 104.772415, y: -58.348846, z: -110.28884}
+  m_LocalScale: {x: 0.10691672, y: 0.10691672, z: 0.10691672}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1230858480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230858477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6ba7d2449c5e6244aa22a461cf64fd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 373974105}
+  fadeDuration: 10
+  blackHoldDuration: 5
+  startFadeAfter: 239
+  nextSceneName: EndScene
 --- !u!4 &1234971906 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9134988930701411465, guid: 80976c17937339841ac91142f0c0091c, type: 3}
@@ -44728,6 +44777,7 @@ SceneRoots:
   - {fileID: 1767324739}
   - {fileID: 1400212472}
   - {fileID: 408143089}
+  - {fileID: 1230858479}
   - {fileID: 1749772204}
   - {fileID: 2112078040}
   - {fileID: 135441338}
