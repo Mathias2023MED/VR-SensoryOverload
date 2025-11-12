@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public enum TalkDirection { None, Left, Right }
@@ -18,24 +18,29 @@ public class NPCIdleController : MonoBehaviour
     public int maxLoopsBeforeSwitch = 4;
 
     [Header("Talking Settings")]
-    public bool canTalk = false;
+    public bool canTalk = false;           // normal talking students
+    public bool isSpecialStudent = false;  // special student with unique mouth animation
+    public float talkTime = 60f;           // when to start talking (seconds since scene start)
+    public float talkDuration = -1f;       // duration; -1 = infinite
     public TalkDirection talkDirection = TalkDirection.None;
 
+    // Internal variables
     private float clipLength;
     private float timer;
     private float currentLoopDuration;
     private bool isTalking = false;
+    private float sceneTimer = 0f;
 
     void Start()
     {
         if (animator == null)
             animator = GetComponent<Animator>();
 
+        // Start on a random idle
         int startIdle = Random.Range(minIdleIndex, maxIdleIndex + 1);
         animator.SetInteger("IdleIndex", startIdle);
         animator.speed = Random.Range(0.9f, 1.1f);
 
-        // If random switching is disabled, just loop one idle forever
         if (!randomizeSwitch)
         {
             animator.Play($"Idle{startIdle}");
@@ -49,7 +54,17 @@ public class NPCIdleController : MonoBehaviour
 
     void Update()
     {
-        // Do not switch idles if talking
+        // Track scene time
+        sceneTimer += Time.deltaTime;
+
+        // Auto-trigger talking by scene time
+        if (canTalk && !isTalking && sceneTimer >= talkTime)
+        {
+            Debug.Log($"{name} starting talk at {sceneTimer}s");
+            TriggerTalking();
+        }
+
+        // Idle switching logic
         if (isTalking || !randomizeSwitch) return;
 
         timer += Time.deltaTime;
@@ -79,12 +94,30 @@ public class NPCIdleController : MonoBehaviour
 
         isTalking = true;
 
-        // pick correct talk animation
-        string animName = talkDirection == TalkDirection.Left ? "TalkLeft" : "TalkRight";
+        // Body talk animation (directional)
+        string animName = TalkDirection.None switch
+        {
+            TalkDirection.Left => "TalkLeft",
+            TalkDirection.Right => "TalkRight",
+            _ => "TalkLeft" // default
+        };
         animator.CrossFade(animName, 0.25f);
 
-        // optional: turn on mouth movement layer
-        animator.SetBool("IsTalking", true);
+        // Mouth animation layer
+        if (isSpecialStudent)
+            animator.SetBool("IsSpecialTalking", true);
+        else
+            animator.SetBool("IsTalking", true);
+
+        // Optional: stop after duration if > 0
+        if (talkDuration > 0f)
+            StartCoroutine(StopTalkingAfterDelay(talkDuration));
+    }
+
+    private IEnumerator StopTalkingAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        StopTalking();
     }
 
     public void StopTalking()
@@ -92,9 +125,12 @@ public class NPCIdleController : MonoBehaviour
         if (!isTalking) return;
 
         isTalking = false;
-        animator.SetBool("IsTalking", false);
 
-        // resume idle switching
+        // Reset mouth layer
+        animator.SetBool("IsTalking", false);
+        animator.SetBool("IsSpecialTalking", false);
+
+        // Resume random idle switching
         int newIdle = Random.Range(minIdleIndex, maxIdleIndex + 1);
         animator.SetInteger("IdleIndex", newIdle);
         animator.CrossFade($"Idle{newIdle}", 0.3f);
