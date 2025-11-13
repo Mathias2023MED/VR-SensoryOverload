@@ -35015,7 +35015,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
-      value: 3
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: minIdleIndex
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkDuration
@@ -35024,6 +35028,10 @@ PrefabInstance:
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkDirection
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: randomizeSwitch
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: isSpecialStudent
