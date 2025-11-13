@@ -4707,7 +4707,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkTime
-      value: 120
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
@@ -6566,6 +6566,14 @@ PrefabInstance:
       value: -0.036586553
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkTime
+      value: 205
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: randomizeSwitch
       value: 0
       objectReference: {fileID: 0}
@@ -7837,8 +7845,16 @@ PrefabInstance:
       value: -0.036586553
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkTime
+      value: 205
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7235178933998609381, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_IsActive
@@ -14315,7 +14331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkTime
-      value: 30
+      value: 205
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: minIdleIndex
@@ -16349,6 +16365,18 @@ PrefabInstance:
     - target: {fileID: 6478956542031625305, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.036586553
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: canTalk
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkTime
+      value: 205
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: randomizeSwitch
@@ -23926,7 +23954,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkTime
-      value: 50
+      value: 205
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkDuration
@@ -25448,7 +25476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkTime
-      value: 50
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
@@ -28721,12 +28749,20 @@ PrefabInstance:
       value: -0.036586553
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkTime
+      value: 205
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: minIdleIndex
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: randomizeSwitch
@@ -30801,8 +30837,20 @@ PrefabInstance:
       value: -0.036586553
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: canTalk
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkTime
+      value: 205
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7121897446239062787, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_IsActive
@@ -32060,7 +32108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkTime
-      value: 30
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
@@ -34963,11 +35011,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkTime
-      value: 20
+      value: 224
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkDuration
@@ -36805,6 +36853,18 @@ PrefabInstance:
     - target: {fileID: 6478956542031625305, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.036586553
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: canTalk
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkTime
+      value: 205
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: randomizeSwitch
@@ -38862,8 +38922,20 @@ PrefabInstance:
       value: -0.036586553
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: canTalk
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkTime
+      value: 205
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7121897446239062787, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_IsActive
@@ -41622,6 +41694,18 @@ PrefabInstance:
       value: -0.036586553
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: canTalk
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkTime
+      value: 205
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: randomizeSwitch
       value: 0
       objectReference: {fileID: 0}
@@ -43380,12 +43464,20 @@ PrefabInstance:
       value: -0.036586553
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkTime
+      value: 205
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: minIdleIndex
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: randomizeSwitch
@@ -45092,6 +45184,14 @@ PrefabInstance:
     - target: {fileID: 6478956542031625305, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.036586553
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkTime
+      value: 205
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7121897446239062787, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_IsActive
@@ -46949,7 +47049,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkTime
-      value: 30
+      value: 205
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: minIdleIndex
@@ -49256,8 +49356,20 @@ PrefabInstance:
       value: -0.036586553
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: canTalk
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkTime
+      value: 205
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7121897446239062787, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_IsActive
@@ -50513,11 +50625,23 @@ PrefabInstance:
       value: -0.036586553
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: canTalk
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkTime
+      value: 205
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: minIdleIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7121897446239062787, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
@@ -52862,7 +52986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkTime
-      value: 30
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
@@ -55652,6 +55776,18 @@ PrefabInstance:
     - target: {fileID: 6478956542031625305, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.036586553
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: canTalk
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkTime
+      value: 205
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: randomizeSwitch
@@ -59436,11 +59572,19 @@ PrefabInstance:
       value: -0.036586553
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkTime
+      value: 205
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: minIdleIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkDirection
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7121897446239062787, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
@@ -61418,6 +61562,10 @@ PrefabInstance:
     - target: {fileID: 6478956542031625305, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.036586553
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: talkTime
+      value: 205
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
@@ -64759,7 +64907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkTime
-      value: 120
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex
@@ -68588,7 +68736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkTime
-      value: 50
+      value: 205
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkDuration
@@ -68601,6 +68749,10 @@ PrefabInstance:
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: randomizeSwitch
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: isSpecialStudent
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7235178933998609381, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_IsActive
@@ -70523,7 +70675,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: talkTime
-      value: 20
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 6515764606452136287, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: maxIdleIndex

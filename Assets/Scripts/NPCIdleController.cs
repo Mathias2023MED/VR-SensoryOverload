@@ -39,6 +39,12 @@ public class NPCIdleController : MonoBehaviour
             animator.Play($"Idle{startIdle}");
     }
 
+    // Start timer on awake of the scene
+    void Awake()
+    {
+        timer = 0f;
+    }
+
     void Update()
     {
         // Auto-trigger talking by time
