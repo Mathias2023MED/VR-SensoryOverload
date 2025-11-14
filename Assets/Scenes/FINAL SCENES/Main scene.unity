@@ -46619,7 +46619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4261958944631677662, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4402689822515769534, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -46884,6 +46884,10 @@ PrefabInstance:
     - target: {fileID: 5761337937460009569, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_Name
       value: Student (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761337937460009569, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5858455476765985074, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
       propertyPath: m_LocalPosition.z
@@ -47225,6 +47229,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 3983a587a6901e54f93d4644eddea66d, type: 2}
+    - target: {fileID: 9099160469452064622, guid: 4f92fbf7b0b1f1743b47941c086a90ea, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
