@@ -1049,7 +1049,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Overstimulation
+  m_text: Tryk "START" for at begynde simulationen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 70c8fefc18a5a446e8e9d5f1a94ec950, type: 2}
   m_sharedMaterial: {fileID: 6527458663559761866, guid: 70c8fefc18a5a446e8e9d5f1a94ec950, type: 2}
