@@ -5,19 +5,22 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 [RequireComponent(typeof(XRGrabInteractable))]
-public class SpinnerResistanceHaptics : MonoBehaviour
+public class SpinnerAlwaysAndResistanceHaptics : MonoBehaviour
 {
     [Header("References")]
     public HapticImpulsePlayer rightHandHaptics;
 
     [Header("Haptics")]
-    public float maxAmplitude = 0.6f;      // max styrke
-    public float pulseDuration = 0.04f;    // længde på hver “buzz”
-    public float pulseInterval = 0.04f;    // hvor tit vi må sende haptics
+    [Range(0f, 1f)]
+    public float baseAmplitude = 0.15f;     // altid-aktiv vibration
+    [Range(0f, 1f)]
+    public float extraAmplitude = 0.45f;    // ekstra oveni ved rotation
+    public float pulseDuration = 0.04f;     // længde på hver puls
+    public float pulseInterval = 0.04f;     // hvor tit vi sender puls
 
-    [Header("Hånd-rotation")]
-    public float minAngularSpeed = 30f;    // under dette = ingen haptics
-    public float maxAngularSpeed = 720f;   // ved/over dette = maxAmplitude
+    [Header("Hånd-rotation til modstand")]
+    public float minAngularSpeed = 30f;     // under dette: kun baseAmplitude
+    public float maxAngularSpeed = 720f;    // ved/over dette: fuld extraAmplitude
 
     private XRGrabInteractable grab;
     private IXRSelectInteractor interactor;
@@ -43,7 +46,7 @@ public class SpinnerResistanceHaptics : MonoBehaviour
     {
         interactor = args.interactorObject;
         isHeld = true;
-        hasLastRotation = false; // reset
+        hasLastRotation = false;
     }
 
     void OnSelectExited(SelectExitEventArgs args)
@@ -54,33 +57,42 @@ public class SpinnerResistanceHaptics : MonoBehaviour
 
     void Update()
     {
-        if (!isHeld || rightHandHaptics == null || interactor == null)
+        if (!isHeld || rightHandHaptics == null)
             return;
 
-        Transform handTransform = interactor.transform;
+        float amplitude = baseAmplitude;
 
-        if (!hasLastRotation)
+        // Hvis vi har en hånd at måle på, læg ekstra oveni basen
+        if (interactor != null)
         {
-            lastHandRotation = handTransform.rotation;
-            hasLastRotation = true;
-            return;
+            Transform handTransform = interactor.transform;
+
+            if (!hasLastRotation)
+            {
+                lastHandRotation = handTransform.rotation;
+                hasLastRotation = true;
+            }
+            else
+            {
+                Quaternion currentRot = handTransform.rotation;
+                Quaternion delta = currentRot * Quaternion.Inverse(lastHandRotation);
+                delta.ToAngleAxis(out float angle, out _);
+                float angularSpeed = angle / Time.deltaTime; // grader/sek
+
+                lastHandRotation = currentRot;
+
+                // Map hastighed -> 0..1
+                float t = Mathf.InverseLerp(minAngularSpeed, maxAngularSpeed, angularSpeed);
+                t = Mathf.Clamp01(t);
+
+                // læg ekstra vibraton oveni basen
+                amplitude += extraAmplitude * t;
+            }
         }
 
-        // Beregn hvor meget hånden har roteret siden sidste frame
-        Quaternion currentRot = handTransform.rotation;
-        Quaternion delta = currentRot * Quaternion.Inverse(lastHandRotation);
-        delta.ToAngleAxis(out float angle, out _);   // vinkel i grader
-        float angularSpeed = angle / Time.deltaTime; // grader/sekund
-        lastHandRotation = currentRot;
+        amplitude = Mathf.Clamp01(amplitude);
 
-        // Map hastighed -> intensitet (0..1)
-        float t = Mathf.InverseLerp(minAngularSpeed, maxAngularSpeed, angularSpeed);
-        float amplitude = Mathf.Clamp01(t) * maxAmplitude;
-
-        if (amplitude <= 0f)
-            return;
-
-        // Send små pulseret haptik, så det føles som modstand
+        // Send pulseret haptik hele tiden mens den er holdt
         if (Time.time - lastPulseTime >= pulseInterval)
         {
             rightHandHaptics.SendHapticImpulse(amplitude, pulseDuration);
